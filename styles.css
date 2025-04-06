@@ -23,6 +23,11 @@ body {
     gap: 20px;
 }
 
+.nav_menu a{
+    text-decoration: none;
+    color: white;
+}
+
 .nav_menu > div {
     position: relative;
     cursor: pointer;
@@ -45,10 +50,12 @@ body {
     background-color: #fa3700;
     width: 200px;
     list-style: none;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     z-index: 100;
     margin-top: 10px;
+    transition: opacity 0.2s, visibility 0s 0.2s;
 }
 
 .dropdown li {
@@ -61,7 +68,9 @@ body {
 }
 
 .WordPress_Link:hover .dropdown {
-    display:block;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.2s;
 }
 
 .tutorials_submenu {
@@ -71,8 +80,10 @@ body {
     background-color: #fa3700;
     width: 180px;
     list-style: none;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: opacity 0.2s, visibility 0s 0.2s;
 }
 
 .tutorials_submenu li {
@@ -84,8 +95,9 @@ body {
 }
 
 .tutorials_item:hover .tutorials_submenu {
-    display: block;
-    background-color: #fa3700;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.2s;
 }
 
 .WordPress_Link::after {
@@ -97,5 +109,4 @@ body {
     font-size: 0.7em;
     position: absolute;
     right: 10px;
-
 }
